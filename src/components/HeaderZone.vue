@@ -20,12 +20,11 @@ export default {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    background-color: var(--orange);
   }
 
   .myname{
     font-size: 8vw;
-    color: var(--whiteblue);
+    color: var(--orange);
     text-decoration: none;
     letter-spacing: 1vw;
   }

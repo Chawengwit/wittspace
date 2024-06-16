@@ -1,6 +1,8 @@
 <template>
   <div id="footerZone">
-    <h1>Footer</h1>
+    <div class="footer">
+      <p>Copyright 2024 by Chawengwit</p>
+    </div>
   </div>
 </template>
 
@@ -11,5 +13,13 @@ export default {
 </script>
 
 <style>
-
+  .footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    padding: 20px;
+  }
 </style>

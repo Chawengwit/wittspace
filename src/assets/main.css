@@ -5,11 +5,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
   font-family: "Sulphur Point", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+
+  background-color: var(--whiteblue);
 }
 
-#Container{
-  max-width: 1280px;
-  /* width: 100%; */
+#app{
+  width: 100%;
 }
 

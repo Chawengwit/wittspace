@@ -16,7 +16,7 @@ export default {
   components: {
     HeaderZone,
     ContentZone,
-    FooterZone
+    // FooterZone
   }
 }
 </script>

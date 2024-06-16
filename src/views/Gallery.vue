@@ -1,13 +1,20 @@
 <template>
   <div id="Gallery">
-    <h1>First Page</h1>
-    <h4>Content</h4>
+    <BoxInfo/>
+    <ImageList/>
   </div>
 </template>
 
 <script>
+import BoxInfo from '@/components/BoxInfo.vue';
+import ImageList from '@/components/ImageList.vue';
+
 export default {
-  name: "Gallery"
+  name: "Gallery",
+  components: {
+    BoxInfo,
+    ImageList
+  }
 
 }
 </script>
