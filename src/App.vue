@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="Container">
     <HeaderZone />
     <ContentZone />
     <FooterZone />
@@ -12,7 +12,7 @@ import ContentZone from './components/ContentZone.vue'
 import FooterZone from './components/FooterZone.vue'
 
 export default {
-  name: 'App',
+  name: 'Container',
   components: {
     HeaderZone,
     ContentZone,
@@ -21,4 +21,6 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+
+</style>
