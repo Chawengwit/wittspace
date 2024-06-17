@@ -1,21 +1,43 @@
 <template>
     <div id="ImageList">
         <div class="container-images-list">
+
             <div class="image-col">
-                <div v-for="(image, index) in col_1" :key="index" class="image-box">
-                    <img :src="image"> 
+                <div class="image-container" v-for="(image, index) in col_1" :key="index">
+                    <div  class="image-box">
+                        <img :src="image"> 
+                    </div>
+                    <div class="image-filter">
+                        <div class="location">Hong kong</div>
+                        <div class="film-name">Kodak Gold 200</div>
+                    </div>
                 </div>
             </div>
-            <div class="image-col">
-                <div v-for="(image, index) in col_2" :key="index" class="image-box">
-                    <img :src="image"> 
+
+             <div class="image-col">
+                <div class="image-container" v-for="(image, index) in col_2" :key="index">
+                    <div  class="image-box">
+                        <img :src="image"> 
+                    </div>
+                    <div class="image-filter">
+                        <div class="location">Hong kong</div>
+                        <div class="film-name">Kodak Gold 200</div>
+                    </div>
                 </div>
             </div>
+
             <div class="image-col">
-                <div v-for="(image, index) in col_3" :key="index" class="image-box">
-                    <img :src="image"> 
+                <div class="image-container" v-for="(image, index) in col_3" :key="index">
+                    <div  class="image-box">
+                        <img :src="image"> 
+                    </div>
+                    <div class="image-filter">
+                        <div class="location">Hong kong</div>
+                        <div class="film-name">Kodak Gold 200</div>
+                    </div>
                 </div>
             </div>
+
         </div>
     </div>
 </template>
@@ -28,9 +50,9 @@ export default {
     mounted() {
         for(let idx = 1 ; idx<=21 ;idx++){
             let path = '../src/assets/images/films/' + idx + '.jpg';
-            if(idx <= 7){ this.col_1.push(path); }
-            if(idx > 7 && idx<=12){ this.col_2.push(path); }
-            if(idx > 12 &&idx<=19){ this.col_3.push(path); }
+            if(idx <= 8){ this.col_1.push(path); }
+            if(idx > 8 && idx<=14){ this.col_2.push(path); }
+            if(idx > 14 &&idx<=21){ this.col_3.push(path); }
             
         }
     },
@@ -56,9 +78,48 @@ export default {
         flex-direction: column;
         gap: 20px;
     }
+    .image-container{
+        position: relative;
+        cursor: zoom-in;
+    }
+
+    .image-filter{
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+
+        display: flex;
+        
+        flex-direction: column;
+        align-items: start;
+        justify-content: end;
+        background: transparent;
+        padding: 10px;
+        gap: 5px;
+        color: #FFF;
+        z-index: 2;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.3s ease-out;
+    }
+
+    .image-container:hover .image-filter {
+        display: flex;
+        
+        backdrop-filter: blur(2px);
+        backdrop-filter: brightness(90%);
+
+        visibility: visible;
+        opacity: 1;
+    }
+    .location, .film-name {
+        background-color: transparent ;
+    }
     .image-box{
         width: 100%;
         overflow: hidden;
+        position: relative;
+        z-index: 1;
     }
 
     .image-box img {
